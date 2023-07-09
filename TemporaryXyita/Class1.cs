@@ -4,10 +4,14 @@ using System.Text;
 
 namespace TemporaryXyita
 {
-    class Song
+    struct Point
     {
-        public string name;
-        public string author;
-        public int dura;
+        public int x;
+        public int y;
+        public Point(int cordOne)
+        {
+            x = cordOne;
+            y = cordOne;
+        }
     }
 }

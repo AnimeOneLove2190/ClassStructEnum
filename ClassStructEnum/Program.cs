@@ -36,9 +36,9 @@ namespace ClassStructEnum
             TimeOne.hours = int.Parse(Console.ReadLine());
             TimeOne.minutes = int.Parse(Console.ReadLine());
             TimeOne.seconds = int.Parse(Console.ReadLine());
-            bool condOne = (TimeOne.hours >= 0) && (TimeOne.hours <= 24);
-            bool condTwo = (TimeOne.minutes >= 0) && (TimeOne.hours <= 60);
-            bool condThree = (TimeOne.seconds >= 0) && (TimeOne.seconds <= 60);
+            bool condOne = (TimeOne.hours >= 0) && (TimeOne.hours < 24);
+            bool condTwo = (TimeOne.minutes >= 0) && (TimeOne.hours < 60);
+            bool condThree = (TimeOne.seconds >= 0) && (TimeOne.seconds < 60);
             bool condFour = condOne && condTwo && condThree;
             Console.WriteLine(condFour);
             //Задание3
@@ -95,6 +95,16 @@ namespace ClassStructEnum
                 {
                     Console.WriteLine($"{songTwo.author} - {songTwo.name} {resultTwoOne}:0{resultTwoTwo}");
                 }
+                //Задание5
+                Point cordOne = new Point();
+                cordOne.x = 3;
+                cordOne.y = 3;
+                Point cordTwo = new Point();
+                cordTwo.x = 6;
+                cordTwo.y = 6;
+                double resOne = (cordTwo.x - cordOne.x) * (cordTwo.x - cordOne.x) + (cordTwo.y - cordOne.y) * (cordTwo.y - cordOne.y);
+                double resTwo = Math.Sqrt(resOne);
+                Console.WriteLine(resTwo);
             }
         }
     }
