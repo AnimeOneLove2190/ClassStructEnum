@@ -4,14 +4,11 @@ using System.Text;
 
 namespace TemporaryXyita
 {
-    struct Point
+    enum AccesType
     {
-        public int x;
-        public int y;
-        public Point(int cordOne)
-        {
-            x = cordOne;
-            y = cordOne;
-        }
+        Creation = 1,
+        Removal,
+        Reading,
+        Update,
     }
 }

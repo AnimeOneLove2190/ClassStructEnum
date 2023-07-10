@@ -42,21 +42,19 @@ namespace ClassStructEnum
             bool condFour = condOne && condTwo && condThree;
             Console.WriteLine(condFour);
             //Задание3
-            MessageStatus messageStOne = MessageStatus.Отправлено;
-            MessageStatus messageStTwo = MessageStatus.Доставлено;
-            MessageStatus messageStThree = MessageStatus.Прочитано;
-            int numberOne= int.Parse(Console.ReadLine());
-            if (numberOne == (int)MessageStatus.Отправлено)
+            int numberOne = int.Parse(Console.ReadLine());
+            MessageStatus someTextOne = (MessageStatus)numberOne;
+            if (someTextOne == MessageStatus.sent)
             {
-                Console.WriteLine($"Сообщение {messageStOne}");
+                Console.WriteLine($"Сообщение отправлено");
             }
-            if (numberOne == (int)MessageStatus.Доставлено)
+            if (someTextOne == MessageStatus.delivered)
             {
-                Console.WriteLine($"Сообщение {messageStTwo}");
+                Console.WriteLine($"Сообщение доставлено");
             }
-            if (numberOne == (int)MessageStatus.Прочитано)
+            if (someTextOne == MessageStatus.read)
             {
-                Console.WriteLine($"Сообщение {messageStThree}");
+                Console.WriteLine($"Сообщение прочитано");
             }
             //Задание4
             Song songOne = new Song();
@@ -105,6 +103,26 @@ namespace ClassStructEnum
                 double resOne = (cordTwo.x - cordOne.x) * (cordTwo.x - cordOne.x) + (cordTwo.y - cordOne.y) * (cordTwo.y - cordOne.y);
                 double resTwo = Math.Sqrt(resOne);
                 Console.WriteLine(resTwo);
+                //Задание6
+                int someIntNumberOne = int.Parse(Console.ReadLine());
+                AccessType someTextTwo = (AccessType)someIntNumberOne;
+                if (someTextTwo == AccessType.Creation)
+                {
+                    Console.WriteLine($"Доступно создание");
+                }
+                if (someTextTwo == AccessType.Removal)
+                {
+                    Console.WriteLine($"Доступно удаление");
+                }
+                if (someTextTwo == AccessType.Reading)
+                {
+                    Console.WriteLine($"Доступно чтение");
+                }
+                if (someTextTwo == AccessType.Update)
+                {
+                    Console.WriteLine($"Доступно обновление");
+                }
+
             }
         }
     }

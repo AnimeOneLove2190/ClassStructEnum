@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TemporaryXyita
 {
-    enum MessageStatus
+    enum MessageStatus1
     {
         Отправлено,
         Доставлено,

@@ -4,10 +4,11 @@ using System.Text;
 
 namespace ClassStructEnum
 {
-    enum MessageStatus
+    enum AccessType
     {
-        sent,
-        delivered,
-        read,
+        Creation = 1,
+        Removal,
+        Reading,
+        Update,
     }
 }
