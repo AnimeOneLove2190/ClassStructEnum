@@ -6,24 +6,46 @@ namespace TemporaryXyita
     {
         static void Main(string[] args)
         {
-            int numberOne = int.Parse(Console.ReadLine());
-            AccesType someText = (AccesType)numberOne;
-            if (someText == AccesType.Creation)
+            Company CompanyOne = new Company();
+            CompanyOne.name = "Want2Learn";
+            CompanyOne.description = "Young";
+            CompanyOne.numbers = 34;
+            Company CompanyTwo = new Company();
+            CompanyTwo.name = "Want2Learn";
+            CompanyTwo.description = "Large";
+            CompanyTwo.numbers = 567;
+            Company CompanyThree = new Company();
+            CompanyThree.name = "Want2Learn";
+            CompanyThree.description = "Conservative";
+            CompanyThree.numbers = 5493857;
+            Company CompanyFour = new Company();
+            CompanyFour.name = "Want2Learn";
+            CompanyFour.description = "Я хуй знает чо писать";
+            CompanyFour.numbers = 1;
+            double resultNumbers = 0;
+            double resultCompanies = 0;
+            if (CompanyOne.name == "Want2Learn")
             {
-                Console.WriteLine($"Доступно создание");
+                resultCompanies = resultCompanies + 1;
+                resultNumbers = resultNumbers + CompanyOne.numbers;
             }
-            if (someText == AccesType.Removal)
+            if (CompanyTwo.name == "Want2Learn")
             {
-                Console.WriteLine($"Доступно удаление");
+                resultCompanies = resultCompanies + 1;
+                resultNumbers = resultNumbers + CompanyTwo.numbers;
             }
-            if (someText == AccesType.Reading)
+            if (CompanyThree.name == "Want2Learn")
             {
-                Console.WriteLine($"Доступно чтение");
+                resultCompanies = resultCompanies + 1;
+                resultNumbers = resultNumbers + CompanyThree.numbers;
             }
-            if (someText == AccesType.Update)
+            if (CompanyFour.name == "Want2Learn")
             {
-                Console.WriteLine($"Доступно обновление");
+                resultCompanies = resultCompanies + 1;
+                resultNumbers = resultNumbers + CompanyFour.numbers;
             }
+            double resultXyi = resultNumbers / resultCompanies;
+            Console.WriteLine($"{resultXyi}");
         }
     }
 }

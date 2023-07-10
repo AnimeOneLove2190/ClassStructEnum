@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TemporaryXyita
+namespace ClassStructEnum
 {
     class Company
     {
